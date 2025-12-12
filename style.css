@@ -1,16 +1,18 @@
-:root
-{
-    --bg-black-900: #f2f2fc;
-    --bg-black-100: #fdf9ff;
-    --bg-black-50: #e8dfec;
-    --bg-black-900: #302e4d;
-    --bg-black-700: #504e70;
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600&display=swap');
+:root {
+    --bg-light-900: #f2f2fc;
+    --bg-light-100: #fdf9ff;
+    --bg-light-50:  #e8dfec;
 
+    --bg-dark-900: #302e4d;
+    --bg-dark-700: #504e70;
 }
+
  body
  {
     font-size: 16px;
     line-height: 1.5;
+    font-family: 'Poppins' sans-serif;
 
  }
  *
@@ -25,9 +27,12 @@
 {
     box-sizing: border-box;
 }
+ul{
+    list-style: none;
+}
 .section
 {
-    background: var(--bg-black-900);
+    background: var(--bg-light-900);
     min-height: 100vh;
     display: block;
     position: fixed;
@@ -45,6 +50,17 @@
     position: fixed;
     left: 0;
     top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
     height: 100%;
     z-index: 10;
+}
+.aside .logo
+{
+    position: absolute;
+    top: 50px;
+    font-size: 30px;
+    text-transform: capitalize;
 }
