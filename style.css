@@ -1,4 +1,17 @@
-*{
+:root
+{
+    --bg-black-900: #f2f2fc;
+    --bg-black-100: #fdf9ff;
+    --bg-black-50: #e8dfec;
+    --bg-black-900: #302e4d;
+    --bg-black-700: #504e70;
+
+}
+ body
+ {
     margin: 0;
     padding: 0;
-}
+    font-size: 16px;
+    line-height: 1.5;
+
+ }
