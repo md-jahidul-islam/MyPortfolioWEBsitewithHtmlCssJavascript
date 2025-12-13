@@ -51,11 +51,12 @@ ul{
     position: fixed;
     left: 0;
     top: 0;
+    padding: 30px;
+    height: 100%;
+    border-right:1px solid var(--bg-light-50) ;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px;
-    height: 100%;
     z-index: 10;
 }
 .aside .logo
