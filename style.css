@@ -36,13 +36,88 @@ ul{
     background: var(--bg-light-900);
     min-height: 100vh;
     display: block;
-    position: fixed;
-    left: 270px;
-    top: 0;
-    right: 0;
-    z-index: 0;
+    padding: 0 30px;
     opacity: 1;
 }
+.main-content{
+    padding-left: 270px;
+}
+.padd-15{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+}
+.container{
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+ }
+.btn{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 35px;
+    color: white;
+    border-radius: 40px;
+    display: inline-block;
+    white-space: nowrap;
+    border: none;
+    background: var(--skin-color);
+    transition: all 0.3s ease;
+}
+.btn:hover{
+    transform: scale(1.05);
+}
+ /* ===== HIRE ME BUTTON ===== */
+.hire-me{
+    position: relative;
+    overflow: hidden;
+    background: var(--skin-color);
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+/* 🔥 Shine effect */
+.hire-me::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.5),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+/* Hover animation */
+.hire-me:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(236,24,57,0.4);
+}
+
+/* Shine move */
+.hire-me:hover::before{
+    left: 100%;
+}
+
+/* Click (press) effect */
+.hire-me:active{
+    transform: scale(0.95);
+    box-shadow: 0 5px 10px rgba(236,24,57,0.3);
+}
+
 /* Aside */
 .aside
 {
@@ -80,8 +155,10 @@ ul{
 .aside .logo a span
 {
     font-family: 'Clicker Script',cursive;
-    font-family: 40px;
-
+    font-size: 45px;
+    font-weight: bolder;
+    color: var(--skin-color);
+    
 }
 .aside .logo a::before
 {
@@ -165,4 +242,543 @@ ul{
     border-bottom:1px solid var(--bg-light-50) ;
     color: var(--bg-dark-900);
     padding: 5px 15px;
+}
+
+/*home*/
+/* ===== HOME IMAGE RIGHT SIDE ===== */
+.home-img{
+    flex: 0 0 40%;
+    max-width: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* ===== OUTER CIRCLE ===== */
+.home-img .img-box{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* ===== ROTATING BORDER ===== */
+.home-img .img-box::before,
+.home-img .img-box::after{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: conic-gradient(
+        transparent,
+        transparent,
+        transparent,
+        var(--skin-color)
+    );
+    animation: rotate-border 6s linear infinite;
+}
+
+.home-img .img-box::after{
+    animation-delay: -3s;
+}
+
+/* ===== INNER CIRCLE ===== */
+.home-img .img-box .img-item{
+    position: relative;
+    width: 98%;
+    height: 96%;
+    background: var(--bg-light-900);
+    border-radius: 50%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* ===== IMAGE ===== */
+.home-img .img-box .img-item img{
+    width:110%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes rotate-border{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+ .home { 
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.home .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home .home-info{
+    flex: 0 0 55%;
+    max-width: 55%;
+}
+
+.home .home-img{
+    flex: 0 0 40%;
+    max-width: 40%;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.home .home-info{
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+h3.hello
+{
+    font-size: 28px;
+    margin: 15px 0;
+}
+h3.hello span{
+    font-family: 'Clicker Script', cursive;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--skin-color);
+}
+h3.my-profession{
+    font-size: 30px;
+    margin: 15px 0;
+} 
+.typing{
+    color: var(--skin-color);
+}
+.home-info p{
+    margin-bottom: 70px;
+    font-size: 20px;
+    color: var(--bg-dark-700);
+}
+ .home .home-img img
+{ 
+    margin: auto;
+    border-radius: 100%;
+    height: 400px;
+
+}
+
+/* ===== IMAGE BUTTON-LIKE HOVER EFFECT ===== */
+.home-img .img-box{
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.home-img .img-box:hover{
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 20px 40px var(--skin-color);
+}
+
+/* Inner image smooth */
+.home-img .img-box .img-item img{
+    transition: transform 0.4s ease;
+}
+
+.home-img .img-box:hover .img-item img{
+    transform: scale(1.05);
+}
+
+/* 
+.home-img .img-box::before{
+    filter: blur(1px);
+}
+
+.home-img .img-box:hover::before,
+.home-img .img-box:hover::after{
+    animation-duration: 2s;
+} */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* ===================== Root Variables ===================== */
+:root {
+    --bg-light-900: #f2f2fc;
+    --bg-light-100: #fdf9ff;
+    --bg-light-50:  #e8dfec;
+
+    --bg-dark-900: #302e4d;
+    --bg-dark-700: #504e70;
+
+    /* Skin color (define this if not in color-1.css) */
+    --skin-color: #ec1839;
+}
+
+/* ===================== Global Styles ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+::before, ::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ===================== Section & Container ===================== */
+.section {
+    background: var(--bg-light-900);
+    min-height: 100vh;
+    display: block;
+    padding: 0 30px;
+    opacity: 1;
+}
+
+.main-content {
+    padding-left: 270px;
+}
+
+.padd-15 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+}
+
+/* ===================== Buttons ===================== */
+.btn {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 35px;
+    color: white;
+    border-radius: 40px;
+    display: inline-block;
+    white-space: nowrap;
+    border: none;
+    background: var(--skin-color);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* ===== HIRE ME BUTTON ===== */
+.hire-me {
+    position: relative;
+    overflow: hidden;
+    background: var(--skin-color);
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+/* Shine effect */
+.hire-me::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.5),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+/* Hover animation */
+.hire-me:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(236,24,57,0.4);
+}
+
+/* Shine move */
+.hire-me:hover::before {
+    left: 100%;
+}
+
+/* Click (press) effect */
+.hire-me:active {
+    transform: scale(0.95);
+    box-shadow: 0 5px 10px rgba(236,24,57,0.3);
+}
+
+/* ===================== Aside / Sidebar ===================== */
+.aside {
+    width: 270px;
+    background: var(--bg-light-100);
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 30px;
+    height: 100%;
+    border-right: 1px solid var(--bg-light-50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+/* Logo */
+.aside .logo {
+    position: absolute;
+    top: 50px;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.aside .logo a {
+    color: var(--bg-dark-900);
+    font-weight: 700;
+    padding: 15px 20px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    position: relative;
+}
+
+.aside .logo a span {
+    font-family: 'Clicker Script', cursive;
+    font-size: 45px;
+    font-weight: bolder;
+    color: var(--skin-color);
+}
+
+.aside .logo a::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid var(--skin-color);
+    border-left: 5px solid var(--skin-color);
+    bottom: 0;
+    left: 0;
+}
+
+.aside .logo a::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid var(--skin-color);
+    border-right: 5px solid var(--skin-color);
+    top: 0;
+    right: 0;
+}
+
+/* Nav Toggler */
+.aside .nav-toggler {
+    height: 40px;
+    width: 45px;
+    border: 1px solid var(--bg-light-50);
+    cursor: pointer;
+    position: fixed;
+    left: 300px;
+    top: 20px;
+    background: var(--bg-light-100);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.aside .nav-toggler span {
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    display: inline-block;
+    position: relative;
+}
+
+.aside .nav-toggler span::before {
+    content: '';
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    position: absolute;
+    top: -6px;
+    left: 0;
+}
+
+.aside .nav-toggler span::after {
+    content: '';
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+
+/* Navigation */
+.aside .nav {
+    margin-top: 50px;
+}
+
+.aside .nav li {
+    margin-bottom: 20px;
+    display: block;
+}
+
+.aside .nav li a {
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    border-bottom: 1px solid var(--bg-light-50);
+    color: var(--bg-dark-900);
+    padding: 5px 15px;
+}
+
+/* ===================== Home Section ===================== */
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.home .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Home Info */
+.home .home-info {
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+
+h3.hello {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+h3.hello span {
+    font-family: 'Clicker Script', cursive;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--skin-color);
+}
+
+h3.my-profession {
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+.typing {
+    color: var(--skin-color);
+}
+
+.home-info p {
+    margin-bottom: 70px;
+    font-size: 20px;
+    color: var(--bg-dark-700);
+}
+
+/* Home Image */
+.home-img {
+    flex: 0 0 40%;
+    max-width: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.home-img .img-box {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.home-img .img-box:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 20px 40px var(--skin-color);
+}
+
+/* Rotating Border */
+.home-img .img-box::before,
+.home-img .img-box::after {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: conic-gradient(
+        transparent,
+        transparent,
+        transparent,
+        var(--skin-color)
+    );
+    animation: rotate-border 6s linear infinite;
+}
+
+.home-img .img-box::after {
+    animation-delay: -3s;
+}
+
+/* Inner Circle */
+.home-img .img-box .img-item {
+    position: relative;
+    width: 98%;
+    height: 96%;
+    background: var(--bg-light-900);
+    border-radius: 50%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.home-img .img-box .img-item img {
+    width: 110%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.home-img .img-box:hover .img-item img {
+    transform: scale(1.05);
+}
+
+/* ===================== Animations ===================== */
+@keyframes rotate-border {
+    100% {
+        transform: rotate(360deg);
+    }
 }
