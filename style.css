@@ -717,3 +717,17 @@ h3.my-profession {
     from { left: -120%; }
     to { left: 120%; }
 }
+.about .about-content .education,
+.about .about-content .experience
+{
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-top: 30;
+}
+.about .about-content h3.title
+{
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: var(--bg-light-100);
+}
