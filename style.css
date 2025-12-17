@@ -819,75 +819,62 @@ h3.my-profession {
     margin-top: 80px;
 }
 
-/* Service */
-.service .container
-{
-    padding-bottom: 40px;
+/* ================= SERVICES ================= */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
-.service .service-item
-{
-    margin-bottom: 30px;
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
+
+.service-card {
+    width: 100%;
 }
-.service .service-item .service-item-inner
-{
-    background-color: var(--bg-dark-900);
+
+.service-box {
+    background: var(--bg-dark-900);
+    padding: 40px 30px;
+    border-radius: 14px;
+    height: 100%;
     border: 1px solid var(--bg-light-50);
-    border-radius: 10px;
-    padding: 30px 15px;
-    text-align: center;
-    transition: all 0.35 ease;
-
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.service .service-item .service-item-inner:hover
-{
-    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
-}
-
-.service .service-item .service-item-inner .icon
-{
-    height: 60px;
-    /* width: 60px; */
-    border-radius: 50%;
-    display: block;
-    margin: 0 solid 30px;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-.service .service-item .service-item-inner .icon .fa
-{
-    font-size: 40px;
-    line-height: 60px;
+.service-box i {
+    font-size: 36px;
     color: var(--skin-color);
-    transition: all 0.3s ease;
-
+    margin-bottom: 25px;
+    display: inline-block;
 }
-.service .service-item .service-item-inner:hover .icon
-{
-    background: var(--skin-color);
 
-
-}
-.service .service-item .service-item-inner:hover .icon .fa
-{
-    font-size: 25px;
-    color: #ffffff;
-}
-.service .service-item .service-item-inner h4
-{
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: var(--bg-light-100);
+.service-box h4 {
+    font-size: 20px;
     font-weight: 700;
-    text-transform: capitalize;
-
+    margin-bottom: 12px;
+    color: var(--bg-light-100);
 }
 
-.service .service-item .service-item-inner p{
-    font-size: 16px;
+.service-box p {
+    font-size: 15px;
+    line-height: 26px;
     color: var(--bg-dark-700);
-    line-height: 25px;
-
 }
+
+/* Hover (Very subtle & classy) */
+.service-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
