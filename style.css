@@ -425,33 +425,52 @@ h3.my-profession {
     100% { transform: rotate(360deg); }
 }
 
+
+
 /* ===================== About Section ===================== */
 .about .about-content {
     flex: 0 0 100%;
     max-width: 100%;
 }
 
+/* About Text Wrapper */
 .about .about-content .about-text {
     flex: 0 0 100%;
     max-width: 100%;
+    margin-bottom: 30px;
 }
 
+/* Heading */
 .about .about-content .about-text h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    font-weight: 700;
+    font-size: 28px;                 /* slightly bigger */
+    margin-bottom: 18px;
+    font-weight: 700;                /* less bold, more professional */
     color: var(--bg-light-100);
+    letter-spacing: 0.4px;
+    line-height: 1.4;
 }
 
+/* Highlighted Name / Keyword */
 .about .about-content .about-text h3 span {
     color: var(--skin-color);
+    font-weight: 700;
 }
 
+/* Paragraph Text */
 .about .about-content .about-text p {
     font-size: 16px;
-    line-height: 25px;
+    line-height: 28px;               /* better readability */
     color: var(--bg-dark-700);
+    max-width: 900px;                /* prevents very long lines */
+    text-align: justify;
 }
+
+/* Optional subtle emphasis */
+.about .about-content .about-text p strong {
+    color: var(--bg-light-100);
+    font-weight: 600;
+}
+
 
 .about .about-content .personal-info {
     flex: 0 0 60%;
@@ -463,6 +482,7 @@ h3.my-profession {
     flex: 0 0 50%;
     max-width: 50%;
 }
+
 
 .about .about-content .personal-info .info-item p {
     font-weight: 600;
@@ -571,6 +591,9 @@ h3.my-profession {
     border-radius: 30px;
     font-size: 15px;
 }
+
+
+
 
 /* ================= SKILL SECTION ================= */
 .skills {
@@ -818,6 +841,9 @@ h3.my-profession {
 .about-timeline{
     margin-top: 80px;
 }
+
+
+
 
 /* ================= SERVICES ================= */
 .service-grid {
