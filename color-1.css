@@ -1,4 +1,15 @@
 :root
 {
     --skin-color:#ec1839;
+    /* --skin-color:#ff4d4f; */
+     --tomato: #ff4d4f;
+    --tomato-soft: rgba(255, 77, 79, 0.15);
+    --tomato: #ff4d4f;
+    --tomato-glow: rgba(255, 77, 79, 0.6);
+    --glass-bg: rgba(255, 255, 255, 0.03);
+
+    --accent-primary: #e85d5f;      /* soft tomato */
+    --accent-muted: rgba(232, 93, 95, 0.35);
+    --accent-soft: rgba(232, 93, 95, 0.15);
+    /* --skin-color:#F94315; */
 }

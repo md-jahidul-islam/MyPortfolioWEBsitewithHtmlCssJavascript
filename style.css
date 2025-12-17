@@ -9,7 +9,7 @@
     --bg-dark-900: #ecebf4;
     --bg-dark-700: #504e70;
 
-    --skin-color: #ec1839;
+    /* --skin-color: #ec1839; */
 }
 
 /* ===================== Global Styles ===================== */
@@ -132,6 +132,7 @@ ul {
 .hire-me {
     position: relative;
     overflow: hidden;
+    /* background: var(--skin-color); */
     background: var(--skin-color);
     color: #fff;
     font-weight: 600;
@@ -297,20 +298,21 @@ ul {
 
 /* Navigation */
 .aside .nav {
-    margin-top: 50px;
+    margin-top: 120px;
 }
 
 .aside .nav li {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .aside .nav li a {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 600;
     display: block;
     border-bottom: 1px solid var(--bg-light-50);
     color: var(--bg-dark-900);
     padding: 5px 15px;
+    justify-content: center;
 }
 
 /* ===================== Home Section ===================== */
@@ -717,7 +719,7 @@ h3.my-profession {
     content: '';
     width: 40px;
     height: 3px;
-    background: var(--skin-color);
+    background: var( --skin-color);
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -764,12 +766,12 @@ h3.my-profession {
     height: 18px;
     width: 18px;
     border-radius: 50%;
-    background-color: var(--skin-color);
+    background-color: var( --skin-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .timeline-item:hover .circle-dot {
     transform: scale(1.5);
-    box-shadow: 0 0 12px var(--skin-color);
+    box-shadow: 0 0 12px var( --accent-primary);
 }
 
 /* Timeline Line */
@@ -780,7 +782,7 @@ h3.my-profession {
     height: 100%;
     left: 23px;
     top: 0;
-    background-color: var(--skin-color);
+    background-color: var( --skin-color);
 }
 
 /* Timeline Data */
@@ -793,8 +795,8 @@ h3.my-profession {
 
 /* Timeline Title */
 .timeline-title {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 900;
     color: var(--bg-light-100);
     margin-bottom: 10px;
     display: flex;
@@ -802,7 +804,7 @@ h3.my-profession {
 }
 .timeline-title i {
     margin-right: 8px;
-    color: var(--skin-color);
+    color: var(--accent-primary);
     transition: transform 0.3s ease;
 }
 .timeline-item:hover .timeline-title i {
@@ -819,11 +821,11 @@ h3.my-profession {
 
 /* Highlighted Text */
 .timeline-text .highlight {
-    background: var(--skin-color);
-    color: #fff;
+    background: var( --accent-soft);
+    color: var(--bg-light-100);
     padding: 2px 6px;
-    border-radius: 4px;
-    font-weight: 600;
+    border-radius: 8px;
+    font-weight: 700;
 }
 
 /* Animation: slide up */
@@ -852,9 +854,20 @@ h3.my-profession {
     gap: 30px;
 }
 
+/* Card wrapper animation */
 .service-card {
     width: 100%;
+    animation: fadeUp 0.8s ease forwards;
+    opacity: 0;
 }
+
+/* Stagger effect */
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+.service-card:nth-child(4) { animation-delay: 0.4s; }
+.service-card:nth-child(5) { animation-delay: 0.5s; }
+.service-card:nth-child(6) { animation-delay: 0.6s; }
 
 .service-box {
     background: var(--bg-dark-900);
@@ -862,7 +875,26 @@ h3.my-profession {
     border-radius: 14px;
     height: 100%;
     border: 1px solid var(--bg-light-50);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    transition: 
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Soft gradient glow */
+.service-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at top left,
+        rgba(236, 24, 57, 0.15),
+        transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
 .service-box i {
@@ -870,6 +902,7 @@ h3.my-profession {
     color: var(--skin-color);
     margin-bottom: 25px;
     display: inline-block;
+    transition: transform 0.4s ease;
 }
 
 .service-box h4 {
@@ -885,10 +918,31 @@ h3.my-profession {
     color: var(--bg-dark-700);
 }
 
-/* Hover (Very subtle & classy) */
+/* 🔥 Hover Effects */
 .service-box:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 55px rgba(0,0,0,0.25);
+    border-color: var(--skin-color);
+}
+
+.service-box:hover::before {
+    opacity: 1;
+}
+
+.service-box:hover i {
+    transform: rotate(-6deg) scale(1.15);
+}
+
+/* Entry Animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive */
@@ -903,4 +957,3 @@ h3.my-profession {
         grid-template-columns: 1fr;
     }
 }
-
