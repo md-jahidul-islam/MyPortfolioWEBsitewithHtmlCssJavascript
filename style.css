@@ -960,14 +960,14 @@ h3.my-profession {
 
 
 /* Portfolio */
-.portfolio .portfolio-heading
+.projects .projects-heading
 {
     /* background-color: red; */
     flex: 0 0 100%;
     max-width: 100%;
 }
 
-.portfolio .portfolio-heading h2
+.projects .projects-heading h2
 {
     color: var(--bg-dark-700);
     font-weight: 500;
