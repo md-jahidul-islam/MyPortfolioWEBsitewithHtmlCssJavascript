@@ -1109,6 +1109,236 @@ h3.my-profession {
 }
 
 
+.achievements {
+    padding: 100px 0;
+    background: var(--bg-light-900); /* project background color */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Section Title */
+
+.achievements .section-title h2 {
+    /* color: var(--skin-color); */
+    font-size: 36px;
+    font-weight: 800;
+    /* text-align: center; */
+    margin-bottom: 50px;
+}
+
+.achievements .section-subtitle {
+    /* text-align: center; */
+    color: var(--bg-dark-700);
+    font-size: 16px;
+    margin-bottom: 60px;
+}
+
+/* Achievements Wrapper */
+.achievements-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Individual Card */
+.achievements-item {
+    flex: 0 0 23%;
+    max-width: 23%;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(12px);
+    border-radius: 25px;
+    padding: 50px 20px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.achievements-item::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, var(--skin-color), #ff6ec7, #18ecb0);
+    background-size: 400% 400%;
+    animation: gradientMove 8s ease infinite;
+    opacity: 0.15;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.achievements-item:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(236,24,57,0.3);
+}
+
+/* Icon */
+.achievements-icon {
+    font-size: 50px;
+    color: var(--skin-color);
+    margin-bottom: 20px;
+    z-index: 1;
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    border-radius: 50%;
+    background: rgba(236,24,57,0.1); /* soft skin color glow */
+    transition: all 0.4s ease;
+}
+
+.achievements-item:hover .achievements-icon {
+    transform: scale(1.3);
+    box-shadow: 0 0 20px rgba(236,24,57,0.6);
+}
+
+/* Number */
+.achievements-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--skin-color);
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+}
+
+/* Text */
+.achievements-text {
+    font-size: 16px;
+    color: var(--bg-dark-700);
+    z-index: 1;
+    position: relative;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .achievements-item {
+        flex: 0 0 45%;
+        max-width: 45%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 575px) {
+    .achievements-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+    /* ================= BLOGS SECTION ================= */
+.blogs {
+    padding: 80px 0;
+    background: var(--bg-light-900);
+}
+
+.blogs .section-title h2 {
+    /* color: var(--skin-color); */
+    font-size: 36px;
+    font-weight: 700;
+    /* text-align: center; */
+    margin-bottom: 50px;
+}
+
+.blogs .section-subtitle {
+    /* text-align: center; */
+    color: var(--bg-dark-700);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Blogs Wrapper */
+.blogs-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Individual Blog Item */
+.blog-item {
+    flex: 0 0 30%;
+    max-width: 30%;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+}
+
+.blog-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(236,24,57,0.3);
+}
+
+/* Blog Image */
+.blog-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: transform 0.4s ease;
+}
+
+.blog-item:hover .blog-img img {
+    transform: scale(1.05);
+}
+
+/* Blog Content */
+.blog-content {
+    padding: 25px;
+    text-align: center;
+}
+
+.blog-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--skin-color);
+    margin-bottom: 15px;
+}
+
+.blog-excerpt {
+    font-size: 14px;
+    color: var(--bg-dark-700);
+    line-height: 22px;
+    margin-bottom: 30px;
+}
+
+.blog-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 25px;
+    background: var(--skin-color);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    /* margin-top: 500px; */
+    transition: all 0.3s ease;
+}
+
+.blog-btn:hover {
+    background: #fff;
+    color: var(--skin-color);
+    box-shadow: 0 0 10px var(--skin-color);
+}
+
+
+
+
+
 /* Contact */
 /* ================= CONTACT ================= */
 
