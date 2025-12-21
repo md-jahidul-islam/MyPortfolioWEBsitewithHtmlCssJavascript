@@ -1146,3 +1146,20 @@ h3.my-profession {
     color: var(--skin-color);
 }
 
+.contact .contact-info-item h4{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--bg-light-100);
+    text-transform:capitalize;
+    margin: 15px 0 5px;
+
+}
+.contact .contact-info-item p
+{
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--bg-dark-700);
+    font-weight: 400;
+    
+}
+
