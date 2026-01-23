@@ -28,14 +28,14 @@
 
                     <ul class="nav">
 
-                                <li><a href="#home" class="active"><i class="fa fa-home"></i> Home</a></li>
-                                <li><a href="#about"><i class="fa fa-user"></i> About</a></li>
-                                <li><a href="#education"><i class="fa fa-graduation-cap"></i> Education</a></li>
-                                <li> <a href="#"><i class="fa fa-list"></i>Services</a></li>
-                                <li><a href="#projects"><i class="fa fa-briefcase"></i> Projects</a></li>
-                                <li><a href="#achievements"><i class="fa fa-trophy"></i> Achievements</a></li>
-                                <li><a href="#blogs"><i class="fa fa-blog"></i> Blogs</a></li>
-                                <li><a href="#contact"><i class="fa fa-comments"></i> Contact</a></li>
+                                <li><a href="#Home" class="active"><i class="fa fa-home"></i> Home</a></li>
+                                <li><a href="#About"><i class="fa fa-user"></i> About</a></li>
+                                <li><a href="#Education"><i class="fa fa-graduation-cap"></i> Education</a></li>
+                                <li> <a href="#Services"><i class="fa fa-list"></i>Services</a></li>
+                                <li><a href="#Projects"><i class="fa fa-briefcase"></i> Projects</a></li>
+                                <li><a href="#Achievements"><i class="fa fa-trophy"></i> Achievements</a></li>
+                                <li><a href="#Blogs"><i class="fa fa-blog"></i> Blogs</a></li>
+                                <li><a href="#Contact"><i class="fa fa-comments"></i> Contact</a></li>
                     </ul>
                 </div>
         <!-- ==== Aside End ==== -->
@@ -43,7 +43,7 @@
         <!-- ==== Main Content Start ==== -->
          <div class="main-content">
             <!-- ==== Home Section Start-->
-             <section class="home section">
+             <section class="home section" id="Home">
 
                 <div class="container">
                     <div class="row">
@@ -68,7 +68,7 @@
              
             <!-- ==== About Section Start-->
 
-             <section class="about section ">
+             <section class="about section" id="About">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
@@ -164,7 +164,21 @@
                                 </div>
                             </div>
 
-                                <div class="row about-timeline">
+                               
+
+                        </div>
+                    </div>
+
+                </div>
+             </section>
+
+            <!-- ==== About Section End ========== -->
+
+            <!-- ==== Home Section Start-->
+             <section class="home section" id="Education">
+
+                <div class="container">
+                     <div class="row about-timeline">
                                 <!-- Education Column -->
                                 <div class="education padd-15">
                                     <h3 class="title">Education</h3>
@@ -233,18 +247,13 @@
                                     </div>
                                 </div>
                             </div>
-
-                        </div>
-                    </div>
-
                 </div>
              </section>
-
-            <!-- ==== About Section End ========== -->
+            <!-- ==== Home Section End-->
              
              <!-- ==== Services Section start ========= -->
 
-                            <section class="service section">
+                            <section class="service section" id="Services">
                                 <div class="container">
                                     <div class="row">
                                         <div class="section-title padd-15">
@@ -321,7 +330,7 @@
             <!-- ==== Services Section End -->
             <!-- ==== projects Section Start -->
 
-                            <section class= "projects section">
+                            <section class= "projects section" id="Projects">
 
                                 <div class="container">
 
@@ -409,7 +418,7 @@
 
                             
                 <!-- ==== Achievements Section Start ==== -->
-                <section class="achievements section">
+                <section class="achievements section" id="Achievements">
                     <div class="container">
                         <div class="section-title padd-15">
                             <h2>Achievements</h2>
@@ -455,7 +464,7 @@
 
 
                 <!-- ==== Blogs Section Start ==== -->
-<section class="blogs section">
+<section class="blogs section" id="Blogs">
     <div class="container">
         <div class="section-title padd-15">
             <h2>Latest Blogs</h2>
@@ -506,7 +515,7 @@
 
 
            <!-- ================= Contact Section Start ================= -->
-<section class="contact section" id="contact">
+<section class="contact section" id="Contact">
     <div class="container">
 
         <!-- Section Title -->
@@ -561,29 +570,31 @@
             </div>
 
 
-            <!-- Contact Form -->
+           <!-- Contact Form -->
             <div class="contact-form shadow-dark">
-                <form>
+                <form id="contact-form">
                     <div class="row">
+                        
                         <div class="form-item col-6 padd-15">
-                            <input type="text" class="form-control" placeholder="Your Name">
+                            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
                         </div>
 
                         <div class="form-item col-6 padd-15">
-                            <input type="email" class="form-control" placeholder="Your Email">
+                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
                         </div>
 
                         <div class="form-item col-12 padd-15">
-                            <input type="text" class="form-control" placeholder="Subject">
+                            <input type="text" class="form-control" name="subject" placeholder="Subject" required>
                         </div>
 
                         <div class="form-item col-12 padd-15">
-                            <textarea class="form-control" placeholder="Message"></textarea>
+                            <textarea class="form-control" name="message" placeholder="Message" required></textarea>
                         </div>
 
                         <div class="form-item col-12 padd-15 text-center">
-                            <button class="btn hire-me">Send Message</button>
+                            <button type="submit" class="btn hire-me">Send Message</button>
                         </div>
+
                     </div>
                 </form>
             </div>
@@ -603,7 +614,8 @@
      </div>
     <!-- ==== Main Container End ==== -->
    
-       
-    
+      
+<script src="js/index.js"></script>
+
 </body>
 </html>
