@@ -26,18 +26,6 @@ Check out the live website here: [My Portfolio](https://md-jahidul-islam.github.
 - **Google Apps Script** – Contact form integration with Google Sheets  
 - **GitHub Pages** – Hosting the live website  
 
-## 📂 Project Structure
-
-/MyPortfolioWEBsitewithHtmlCssJavascript
-│
-├── index.html # Main portfolio page
-├── css/
-│ └── style.css # Main stylesheet
-├── js/
-│ └── main.js # JavaScript file for counters and form
-├── images/ # All images used in the portfolio
-└── README.md # Project documentation
-
 ## 🚀 How to Use / Run Locally
 
 1. Clone the repository:
