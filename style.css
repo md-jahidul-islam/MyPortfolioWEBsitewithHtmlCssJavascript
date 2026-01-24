@@ -421,6 +421,7 @@ h3.my-profession {
     width: 110%;
     height: auto;
     object-fit: cover;
+    transform: translateY(-30px);
     transition: transform 0.4s ease;
 }
 

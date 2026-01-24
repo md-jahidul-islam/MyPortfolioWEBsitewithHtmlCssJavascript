@@ -29,15 +29,14 @@ counters.forEach(counter => {
 
 // ================= CONTACT FORM TO GOOGLE SHEET =================
 
-// TUMAR DEPLOYED WEB APP URL — eta correct kore paste kora ache
-const scriptURL = "https://script.google.com/macros/s/AKfycbwuMs3NGActm9OQmiImyQkde8Ai_PdJuG_gHtBy-yehgegBi6o3H7yAe1PxgRLm9m2MRQ/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbyuqRlKlxEtuLenwiQ6POWaKpwBsjhdi3CY6YAK0hwJqOjVRNE_MWDXh85ePdg90gwLgA/exec";
 
 const form = document.getElementById("contact-form");
 
 form.addEventListener("submit", function(e){
-    e.preventDefault(); // Prevent page reload
+    e.preventDefault(); 
 
-    const formData = new FormData(form); // Automatically collect all form fields
+    const formData = new FormData(form); 
 
     fetch(scriptURL, {
         method: "POST",
